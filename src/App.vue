@@ -1,11 +1,37 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-  </div>
-  <router-view/>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Space</a>
+      <button
+        class="navbar-toggler bg-light navbar-light"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">关于我</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#/work">我的作品</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#/think">想法</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <router-view />
 </template>
 
-<style>
+<style >
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -13,17 +39,10 @@
   text-align: center;
   color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.navbar {
+  background-color: rgba(256, 256, 256, 0.7);
+  backdrop-filter: saturate(0.3) blur(10px);
 }
 </style>
+<script>
+</script>
