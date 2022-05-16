@@ -38,10 +38,16 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100vh;
+  background-color: #1a1a1a;
 }
 .navbar {
-  background-color: rgba(256, 256, 256, 0.7);
-  backdrop-filter: saturate(0.3) blur(10px);
+  background-color: rgba(256, 256, 256, 0.5);
+  backdrop-filter: blur(10px);
+  color: #2c3e50;
+}
+.nav-link {
+  color: #2c3e50 !important;
 }
 </style>
 <script>

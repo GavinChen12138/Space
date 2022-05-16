@@ -1,34 +1,8 @@
 <template>
-  <div class="center-layout" style="margin-top: 70px">
+  <div class="center-layout">
+    <div class="blank-zone"></div>
     <div class="typewriter-layout">
       <TypeWriter></TypeWriter>
-    </div>
-    <div class="card" style="width: 18rem">
-      <img src="../assets/pic/Pic2.png" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem">
-      <img src="../assets/pic/Pic1.png" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem">
-      <img src="../assets/pic/Pic3.png" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-      </div>
     </div>
   </div>
 </template>
@@ -45,6 +19,10 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+.blank-zone {
+  width: 100%;
+  height: 70px;
 }
 .typewriter-layout {
   width: 100vw;
