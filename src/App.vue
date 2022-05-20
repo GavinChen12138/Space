@@ -1,11 +1,26 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="navbar text-neutral-l">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl">.Space</a>
+    </div>
+    <div class="flex-none">
+      <button class="btn btn-outline btn-sm" style="margin-left: 10px">
+        <a href="#">👤 关于我</a>
+      </button>
+      <button
+        class="btn btn-outline btn-sm"
+        style="margin-left: 10px"
+        v-bind:to="work"
+      >
+        🚀 我的作品
+      </button>
+      <button class="btn btn-outline btn-sm" style="margin-left: 10px">
+        <a href="#/think">💡 想法</a>
+      </button>
+    </div>
+  </div>
+  <router-view />
 </template>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
