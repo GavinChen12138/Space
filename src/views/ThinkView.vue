@@ -56,6 +56,12 @@
         <div class="stat-desc text-secondary">31 tasks remaining</div>
       </div>
     </div>
+    <div class="mockup-phone">
+      <div class="camera"></div>
+      <div class="display">
+        <div class="artboard artboard-demo phone-1">Hi.</div>
+      </div>
+    </div>
   </div>
 </template>
 

@@ -7,8 +7,8 @@
         <div id="green-dot"></div>
         <div id="card-title">Space</div>
       </div>
-      <h1 class="bg-slate-600" style="margin-left: 1rem">
-        >Hi! I'm Gavin Chen.
+      <h1 style="margin-left: 1rem">
+        ><span class="bg-slate-600">Hi! I'm Gavin Chen.</span>
       </h1>
       <h1 style="margin-left: 1rem">
         >{{ animationText }}
@@ -69,7 +69,8 @@ export default {
   align-items: flex-start;
 }
 .text-card {
-  width: 25rem;
+  min-width: 25rem;
+  max-width: 35rem;
   margin: 1rem;
   border-radius: 10px;
   box-shadow: #3c3c3c5e 0px 0px 15px;
