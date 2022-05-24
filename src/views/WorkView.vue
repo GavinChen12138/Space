@@ -1,4 +1,5 @@
 <template>
+  <div class="blankdiv"></div>
   <div class="stats shadow">
     <div class="stat">
       <div class="stat-figure text-secondary">
@@ -62,4 +63,7 @@
   </div>
 </template>
 <style>
+.blankdiv {
+  height: 65px;
+}
 </style>

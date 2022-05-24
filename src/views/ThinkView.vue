@@ -1,7 +1,8 @@
 <template>
+  <div class="blankdiv"></div>
   <div class="bg-slate-200">
     <div class="stats shadow">
-      <div class="stat">
+      <div class="stat hover:bg-fuchsia-100">
         <div class="stat-figure text-primary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -42,32 +43,24 @@
         <div class="stat-value text-secondary">1.7k</div>
         <div class="stat-desc">在即刻社交平台的被关注者</div>
       </div>
-
-      <div class="stat">
-        <div class="stat-figure text-secondary">
-          <div class="avatar online">
-            <div class="w-16 rounded-full">
-              <img src="@/assets/Pic1.png" />
-            </div>
-          </div>
-        </div>
-        <div class="stat-value">86%</div>
-        <div class="stat-title">Tasks done</div>
-        <div class="stat-desc text-secondary">31 tasks remaining</div>
-      </div>
-    </div>
-    <div class="mockup-phone">
-      <div class="camera"></div>
-      <div class="display">
-        <div class="artboard artboard-demo phone-1">Hi.</div>
-      </div>
     </div>
   </div>
+  <div>享受探索、表达和创造</div>
 </template>
 
 <script>
-export default {};
+import html2canvas from "html2canvas";
+export default {
+  mounted() {
+    html2canvas(document.querySelector("#capture")).then((canvas) => {
+      document.body.appendChild(canvas);
+    });
+  },
+};
 </script>
 
 <style>
+.blankdiv {
+  height: 64px;
+}
 </style>

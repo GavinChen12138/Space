@@ -1,10 +1,21 @@
 <template>
+  <div class="blankdiv"></div>
   <div class="home">
     <div
-      class="bg-slate-200 flex justify-center items-center"
-      style="height: 100vh"
+      class="
+        bg-black
+        justify-center justify-items-center
+        items-center
+        flex flex-wrap
+      "
+      style="height: 100vh; position: relative"
     >
-      <TypeWriter></TypeWriter>
+      <div style="position: absolute">
+        <TypeWriter></TypeWriter>
+      </div>
+      <div style="width: 100%; height: 100%">
+        <canvas id="canvas3d"></canvas>
+      </div>
     </div>
     <div
       class="activebg fisrtbg"
@@ -39,6 +50,7 @@
 
 <script>
 import TypeWriter from "@/components/typeWriter.vue";
+import { Application } from "@splinetool/runtime";
 export default {
   name: "HomeView",
   components: {
@@ -68,6 +80,11 @@ export default {
       this.positionY1 = this.Y1 = pic1.offsetTop * this.ratio;
       this.positionY2 = this.Y2 = pic2.offsetTop * this.ratio;
       this.positionY3 = this.Y3 = pic3.offsetTop * this.ratio;
+    };
+    window.onload = () => {
+      let canvas = document.getElementById("canvas3d");
+      let app = new Application(canvas);
+      app.load("https://prod.spline.design/6mT0eKj5jZVOp9Bp/scene.splinecode");
     };
   },
   methods: {
@@ -190,5 +207,13 @@ li {
   width: 100%;
   font-size: 30px;
   font-weight: bold;
+}
+.blankdiv {
+  height: 64px;
+}
+.center-layout {
+  display: flex;
+  justify-content: flex-center;
+  align-items: flex-center;
 }
 </style>

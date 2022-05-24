@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar text-neutral-l bg-slate-100">
+  <div class="navbar text-neutral-l fixed bg-slate-100">
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl" href="#/about">.Space</a>
     </div>
