@@ -69,9 +69,8 @@ export default {
   align-items: flex-start;
 }
 .text-card {
-  min-width: 25rem;
-  max-width: 35rem;
-  margin: 1rem;
+  min-width: 23rem;
+  max-width: 34rem;
   border-radius: 10px;
   box-shadow: #3c3c3c5e 0px 0px 15px;
   height: max-content;
