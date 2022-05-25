@@ -11,8 +11,6 @@
     >
       <div style="position: absolute">
         <TypeWriter></TypeWriter>
-        <p>This is my space.</p>
-        <p>Keep scrolling for more info.</p>
       </div>
       <div style="width: 100%; height: 100%">
         <canvas id="canvas3d"></canvas>
