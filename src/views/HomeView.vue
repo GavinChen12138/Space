@@ -11,6 +11,9 @@
     >
       <div style="position: absolute">
         <TypeWriter></TypeWriter>
+        <button class="btn btn-primary mt-2" @click="moveToPic1PositionSmooth">
+          ⬇️Start⬇️
+        </button>
       </div>
       <div style="width: 100%; height: 100%">
         <canvas id="canvas3d"></canvas>
@@ -34,15 +37,7 @@
       }"
     ></div>
     <div class="content-item">内容3</div>
-    <div
-      class="activebg thirdbg"
-      id="pic3"
-      v-bind:style="{
-        'background-position-x': positionX,
-        'background-position-y': positionY3 + 'px',
-      }"
-    ></div>
-    <div class="content-item">内容4</div>
+
     <div class="foot">foot</div>
   </div>
 </template>
@@ -75,12 +70,9 @@ export default {
     window.onload = () => {
       let pic1 = document.getElementById("pic1");
       let pic2 = document.getElementById("pic2");
-      let pic3 = document.getElementById("pic3");
+
       this.positionY1 = this.Y1 = pic1.offsetTop * this.ratio;
       this.positionY2 = this.Y2 = pic2.offsetTop * this.ratio;
-      this.positionY3 = this.Y3 = pic3.offsetTop * this.ratio;
-    };
-    window.onload = () => {
       let canvas = document.getElementById("canvas3d");
       let app = new Application(canvas);
       app.load("https://prod.spline.design/6mT0eKj5jZVOp9Bp/scene.splinecode");
@@ -92,7 +84,6 @@ export default {
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop;
-      console.log(scrollTop);
       this.positionY1 = this.Y1 - scrollTop * this.ratio;
       this.positionY2 = this.Y2 - scrollTop * this.ratio;
       this.positionY3 = this.Y3 - scrollTop * this.ratio;
@@ -106,6 +97,23 @@ export default {
         this.titleColor = "transparent";
         this.titleBorder = "0";
       }
+    },
+    moveToPic1PositionSmooth() {
+      let pic1 = document.getElementById("pic1");
+
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      let target = pic1.offsetTop;
+      let step = (target - scrollTop) / 100;
+      let timer = setInterval(() => {
+        scrollTop += step;
+        window.scrollTo(0, scrollTop);
+        if (scrollTop >= target) {
+          clearInterval(timer);
+        }
+      }, 10);
     },
   },
 };

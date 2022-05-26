@@ -103,8 +103,8 @@ export default {
   methods: {
     //点击Save通过html2canvas将preview的子元素转换成图片，并下载,并更新currentTime
     downloadTheMock() {
+      this.currentTime = new Date().toLocaleString();
       html2canvas(document.getElementById("preview")).then((canvas) => {
-        this.currentTime = new Date().toLocaleString();
         let a = document.createElement("a");
         a.href = canvas.toDataURL("image/png");
         a.download = "mock.png";
