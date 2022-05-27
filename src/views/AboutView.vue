@@ -8,7 +8,15 @@
     "
     style="height: 100vh"
   >
-    <div class="mockup-code flex flex-col justify-items-start items-start">
+    <div
+      class="
+        mockup-code
+        flex flex-col
+        justify-items-start
+        items-start
+        max-w-full
+      "
+    >
       <pre data-prefix="$"><code>Present by Gavin Chen</code></pre>
       <pre
         data-prefix=">"

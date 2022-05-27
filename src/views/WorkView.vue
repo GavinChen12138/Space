@@ -12,7 +12,7 @@
         <h2 class="card-title">辑课生涯品牌设计</h2>
         <p>为辑课生涯交付一套符合调性的品牌设计，并在公众号和线下使用</p>
         <div class="card-actions justify-end">
-          <button class="btn btn-primary">点击了解</button>
+          <button class="btn btn-primary" @click="wexinClick">点击了解</button>
         </div>
       </div>
     </div>
@@ -24,7 +24,7 @@
         <h2 class="card-title">辑课生涯SVG交互推文</h2>
         <p>采用SVG，使微信推文实现图文交互，用作企业宣传活动使用</p>
         <div class="card-actions justify-end">
-          <button class="btn btn-primary">点击了解</button>
+          <button class="btn btn-primary" @click="svgClick">点击了解</button>
         </div>
       </div>
     </div>
@@ -62,3 +62,15 @@
   z-index: 10;
 }
 </style>
+<script>
+export default {
+  methods: {
+    wexinClick() {
+      window.open("https://www.baidu.com");
+    },
+    svgClick() {
+      window.open("https://mp.weixin.qq.com/s/2cohbdjI0jzxqYhI95TyLA");
+    },
+  },
+};
+</script>

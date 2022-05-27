@@ -132,6 +132,7 @@ export default {
     document.getElementById("sizeSelect").addEventListener("input", (e) => {
       //thinkCard的width属性与sizeSelect的value绑定
       document.getElementById("thinkCard").style.width = e.target.value + "rem";
+      console.log(e.target.value);
     });
     this.currentTime = new Date().toLocaleString();
   },
